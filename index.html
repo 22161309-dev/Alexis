@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Página Personal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color:#333;
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAV */
+nav{
+    background: rgba(0,0,0,0.85);
+    padding:15px;
+    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
+/* SECCIONES */
+section{
+    padding:120px 20px;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:1100px;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#2a5298;
+}
+
+/* SOBRE MI */
+.sobre-mi{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.sobre-mi img{
+    width:300px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.sobre-mi img:hover{
+    transform:scale(1.05);
+}
+
+/* CARRUSEL */
+.carousel{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+.carousel-track{
+    display:flex;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    margin:10px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.carousel img:hover{
+    transform:scale(1.1);
+    filter:brightness(1.2);
+}
+
+@keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+/* HOBBIES */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.08);
+    filter:brightness(1.2);
+}
+
+/* BOTONES */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 25px;
+    background:#2a5298;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1e3c72;
+    transform:scale(1.05);
+}
+
+.media{
+    text-align:center;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#familia">Familia</a>
+    <a href="#novia">Mi Novia</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#musica">Música</a>
+    <a href="#videos">Videos</a>
+</nav>
+
+<!-- SOBRE MI -->
+<section id="sobre">
+<div class="card">
+    <div class="sobre-mi">
+        <img src="yo.jpeg">
+		<img src="yo1.jpeg">
+		<img src="yo2.jpeg"
+        <div>
+            <h2>¿Quién soy?</h2>
+            <p>
+				Mi nombre es Alexis, tengo 21 años y actualmente curso la carrera de 
+				Ingeniería Electrónica. Elegí esta profesión debido a mi interés por 
+				los sistemas electrónicos, la tecnología y el impacto que estos tienen 
+				en el desarrollo de la sociedad moderna.
+			</p>
+
+			<p>
+				Durante mi formación académica he desarrollado habilidades en análisis 
+				de circuitos, resolución de problemas técnicos y pensamiento lógico. 
+				Me considero una persona disciplinada, responsable y enfocada en alcanzar 
+				mis metas profesionales, buscando siempre mejorar mis conocimientos 
+				y capacidades.
+			</p>
+
+			<p>
+				Mi objetivo es convertirme en un profesional preparado y competente, 
+				capaz de aportar soluciones innovadoras dentro del campo de la electrónica 
+				y las telecomunicaciones.
+			</p>
+            <a href="#familia" class="btn">Conocer más</a>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- FAMILIA -->
+<section id="familia">
+<div class="card">
+    <h2>Mi Familia</h2>
+	<p>
+		Mi familia está conformada por cinco integrantes, incluyéndome. 
+		Actualmente vivimos cuatro de nosotros en México, mientras que mi 
+		hermano mayor reside en Estados Unidos, donde trabaja y continúa 
+		con su desarrollo personal y profesional.
+	</p>
+
+	<p>
+		A pesar de la distancia, la comunicación constante fortalece nuestro 
+		vínculo familiar. Mis padres han sido un ejemplo de esfuerzo y dedicación, 
+		brindándome apoyo incondicional en cada etapa de mi vida académica.
+	</p>
+
+	<p>
+		Los valores que me han inculcado, como la responsabilidad, el respeto 
+		y la perseverancia, han sido fundamentales para mi crecimiento personal 
+		y profesional.
+	</p>
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="familia1.jpeg">
+            <img src="familia2.jpeg">
+            <img src="familia3.jpeg">
+            <img src="familia4.jpeg">
+            <img src="familia5.jpeg">
+            <img src="familia6.jpeg">
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- NOVIA -->
+<section id="novia">
+<div class="card">
+    <h2>Mi Novia</h2>
+    <p style="text-align:center;">
+        <p>
+			Mi novia ocupa un lugar importante en mi vida, ya que representa apoyo, 
+			motivación y estabilidad emocional durante mi etapa universitaria.
+			</p>
+
+			<p>
+			Su forma de pensar, su dedicación y su compromiso con sus propias metas 
+			son cualidades que admiro profundamente. Nuestra relación se basa en el 
+			respeto, la comunicación y la confianza mutua.
+			</p>
+
+			<p>
+			Considero que el apoyo emocional es un elemento clave para el desarrollo 
+			personal, y contar con una persona que motive e impulse a superarse 
+			contribuye significativamente al crecimiento integral.
+			</p>
+
+         </p>
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="novia1.jpeg">
+            <img src="novia2.jpeg">
+            <img src="novia3.jpeg">
+            <img src="novia4.jpeg">
+            <img src="novia5.jpeg">
+            <img src="novia6.jpeg">
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies">
+<div class="card">
+    <h2>Mis Hobbies</h2>
+	   <p>
+			Uno de mis principales hobbies es el baile, especialmente los ritmos 
+			latinos como la salsa y la bachata. Estas disciplinas no solo representan 
+			una actividad recreativa, sino también una forma de expresión cultural 
+			y artística que requiere coordinación, ritmo y dedicación.
+			</p>
+
+			<p>
+			Bailar salsa y bachata me permite desarrollar habilidades como la 
+			disciplina, la confianza y la conexión social. Además, contribuye 
+			a mantener un equilibrio entre mi vida académica y personal, ayudándome 
+			a liberar estrés y fortalecer mi bienestar físico y mental.
+			</p>
+
+			<p>
+			Los ritmos latinos forman parte importante de mi identidad y representan 
+			una pasión que complemento con mi formación profesional en ingeniería, 
+			demostrando que el desarrollo integral incluye tanto el crecimiento 
+			intelectual como el cultural y artístico.
+		</p>
+
+    <div class="galeria">
+        <img src="hobby3.jpeg">
+		<img src="hobby4.jpeg">
+
+		<img src="hobby6.jpeg">
+		<img src="hobby7.jpeg">
+    </div>
+</div>
+</section>
+
+<!-- MUSICA -->
+<section id="musica">
+<div class="card media">
+    <h2>Mi Música Favorita</h2>
+    <audio controls>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+</div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+<div class="card media">
+    <h2>Mis Videos</h2>
+
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/hGs0xPetRQQ"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+
+    <br><br>
+
+    <video width="500" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+</div>
+</section>
+
+<footer>
+    © 2026 - Página Personal | Alexis
+</footer>
+
+</body>
+</html>
